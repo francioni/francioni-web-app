@@ -1,5 +1,5 @@
 const header = {
-    title: 'title2'
+    title: 'title3'
 }
 
 const home = {
