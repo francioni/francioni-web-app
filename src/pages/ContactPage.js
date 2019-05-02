@@ -9,7 +9,7 @@ import BrandSection from '../components/BrandSection';
 import RelatedProducts from '../components/RelatedProducts';
 import FooterSection from '../components/FooterSection';
 
-export default class HomePage extends React.Component {
+export default class ContactPage extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -18,13 +18,7 @@ export default class HomePage extends React.Component {
         return (
             <Fragment>
                 <HeaderSection data={data.header} />
-                <BannerSection />
                 <FeaturesSection />
-                <CategoriesSection />
-                <ProductsSection />
-                <ExclusiveDealsSection />
-                <BrandSection />
-                <RelatedProducts />
                 <FooterSection />
             </Fragment>
         );

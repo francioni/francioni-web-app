@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-import HeaderSection from '../components/HeaderSection';
 import BannerSection from '../components/BannerSection';
 import FeaturesSection from '../components/FeaturesSection';
 import CategoriesSection from '../components/CategoriesSection';
@@ -7,9 +6,10 @@ import ExclusiveDealsSection from '../components/ExclusiveDealsSection';
 import ProductsSection from '../components/ProductsSection';
 import BrandSection from '../components/BrandSection';
 import RelatedProducts from '../components/RelatedProducts';
+import HeaderSection from '../components/HeaderSection';
 import FooterSection from '../components/FooterSection';
 
-export default class HomePage extends React.Component {
+export default class CatalogPage extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -18,13 +18,7 @@ export default class HomePage extends React.Component {
         return (
             <Fragment>
                 <HeaderSection data={data.header} />
-                <BannerSection />
-                <FeaturesSection />
-                <CategoriesSection />
                 <ProductsSection />
-                <ExclusiveDealsSection />
-                <BrandSection />
-                <RelatedProducts />
                 <FooterSection />
             </Fragment>
         );

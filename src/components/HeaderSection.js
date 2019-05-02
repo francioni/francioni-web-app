@@ -1,9 +1,27 @@
 import React from 'react';
+import { redirect } from '../utils';
 
 export default class HeaderSection extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+    renderItemOption = (option, index) => (<li key={index} className="nav-item"><a className="nav-link" href="category.html">{option.title}</a></li>);
+
+    renderItem = (item, index) => (
+        <li key={index} className="nav-item submenu dropdown">
+            <a onClick={() => { redirect(item.href) }}
+                style={{ cursor: 'pointer' }}
+                className="nav-link dropdown-toggle"
+                data-toggle="dropdown"
+                role="button"
+                aria-expanded="false"
+                aria-haspopup="true"
+            >{item.title}</a>
+            <ul className="dropdown-menu">
+                {item.options && item.options.map((option, index) => this.renderItemOption(option, index))}
+            </ul>
+        </li>
+    )
+
+    renderItems = items => items.map((item, index) => this.renderItem(item, index));
+
     render() {
         const { data } = this.props;
         return (
@@ -11,7 +29,7 @@ export default class HeaderSection extends React.Component {
                 <div className="main_menu">
                     <nav className="navbar navbar-expand-lg navbar-light main_box">
                         <div className="container">
-                            <a className="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt="" /></a>
+                            <a className="navbar-brand logo_h" href="index.html"><img style={{ width: '75px' }} src="img/logo.png" alt="" /></a>
                             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span className="icon-bar"></span>
@@ -20,36 +38,9 @@ export default class HeaderSection extends React.Component {
                             </button>
                             <div className="collapse navbar-collapse offset" id="navbarSupportedContent">
                                 <ul className="nav navbar-nav menu_nav ml-auto">
-                                    <li className="nav-item active"><a className="nav-link" href="index.html">{data.title}</a></li>
-                                    <li className="nav-item submenu dropdown">
-                                        <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                            aria-expanded="false">Shop</a>
-                                        <ul className="dropdown-menu">
-                                            <li className="nav-item"><a className="nav-link" href="category.html">Shop Category</a></li>
-                                            <li className="nav-item"><a className="nav-link" href="single-product.html">Product Details</a></li>
-                                            <li className="nav-item"><a className="nav-link" href="checkout.html">Product Checkout</a></li>
-                                            <li className="nav-item"><a className="nav-link" href="cart.html">Shopping Cart</a></li>
-                                            <li className="nav-item"><a className="nav-link" href="confirmation.html">Confirmation</a></li>
-                                        </ul>
-                                    </li>
-                                    <li className="nav-item submenu dropdown">
-                                        <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                            aria-expanded="false">Blog</a>
-                                        <ul className="dropdown-menu">
-                                            <li className="nav-item"><a className="nav-link" href="blog.html">Blog</a></li>
-                                            <li className="nav-item"><a className="nav-link" href="single-blog.html">Blog Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li className="nav-item submenu dropdown">
-                                        <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                                            aria-expanded="false">Pages</a>
-                                        <ul className="dropdown-menu">
-                                            <li className="nav-item"><a className="nav-link" href="login.html">Login</a></li>
-                                            <li className="nav-item"><a className="nav-link" href="tracking.html">Tracking</a></li>
-                                            <li className="nav-item"><a className="nav-link" href="elements.html">Elements</a></li>
-                                        </ul>
-                                    </li>
-                                    <li className="nav-item"><a className="nav-link" href="contact.html">Contact</a></li>
+                                    {
+                                        this.renderItems(data.items)
+                                    }
                                 </ul>
                                 <ul className="nav navbar-nav navbar-right">
                                     <li className="nav-item"><a href="#" className="cart"><span className="ti-bag"></span></a></li>
@@ -60,15 +51,6 @@ export default class HeaderSection extends React.Component {
                             </div>
                         </div>
                     </nav>
-                </div>
-                <div className="search_input" id="search_input_box">
-                    <div className="container">
-                        <form className="d-flex justify-content-between">
-                            <input type="text" className="form-control" id="search_input" placeholder="Search Here" />
-                            <button type="submit" className="btn"></button>
-                            <span className="lnr lnr-cross" id="close_search" title="Close Search"></span>
-                        </form>
-                    </div>
                 </div>
             </header>
         )
