@@ -42,12 +42,6 @@ export default class HeaderSection extends React.Component {
                                         this.renderItems(data.items)
                                     }
                                 </ul>
-                                <ul className="nav navbar-nav navbar-right">
-                                    <li className="nav-item"><a href="#" className="cart"><span className="ti-bag"></span></a></li>
-                                    <li className="nav-item">
-                                        <button className="search"><span className="lnr lnr-magnifier" id="search"></span></button>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                     </nav>

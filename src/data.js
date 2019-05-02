@@ -15,19 +15,19 @@ const header = {
             href: '#catalogo',
             options: [
                 {
-                    title: 'Sos trolo'
+                    title: 'catalogo 1'
                 },
                 {
-                    title: 'Product Details'
+                    title: 'catalogo 2'
                 },
                 {
-                    title: 'Product Checkout'
+                    title: 'catalogo 3'
                 },
                 {
-                    title: 'Shopping Cart'
+                    title: 'catalogo 4'
                 },
                 {
-                    title: 'Confirmation'
+                    title: 'catalogo 5'
                 }
             ]
         },

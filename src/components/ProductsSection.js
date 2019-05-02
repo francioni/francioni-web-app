@@ -19,7 +19,7 @@ export default class ProductsSection extends React.Component {
                         <div className="row">
                             <div className="col-lg-3 col-md-6">
                                 <div className="single-product">
-                                    <img className="img-fluid" src="img/product/p1.jpg" alt="" />
+                                    <img className="img-fluid" src="img/items/g1.jpeg" alt="" />
                                     <div className="product-details">
                                         <h6>addidas New Hammer sole
 									for Sports person</h6>
@@ -51,7 +51,7 @@ export default class ProductsSection extends React.Component {
                             </div>
                             <div className="col-lg-3 col-md-6">
                                 <div className="single-product">
-                                    <img className="img-fluid" src="img/product/p2.jpg" alt="" />
+                                    <img className="img-fluid" src="img/items/g2.jpeg" alt="" />
                                     <div className="product-details">
                                         <h6>addidas New Hammer sole
 									for Sports person</h6>
@@ -83,7 +83,7 @@ export default class ProductsSection extends React.Component {
                             </div>
                             <div className="col-lg-3 col-md-6">
                                 <div className="single-product">
-                                    <img className="img-fluid" src="img/product/p3.jpg" alt="" />
+                                    <img className="img-fluid" src="img/items/g3.jpeg" alt="" />
                                     <div className="product-details">
                                         <h6>addidas New Hammer sole
 									for Sports person</h6>
@@ -114,39 +114,7 @@ export default class ProductsSection extends React.Component {
                             </div>
                             <div className="col-lg-3 col-md-6">
                                 <div className="single-product">
-                                    <img className="img-fluid" src="img/product/p4.jpg" alt="" />
-                                    <div className="product-details">
-                                        <h6>addidas New Hammer sole
-									for Sports person</h6>
-                                        <div className="price">
-                                            <h6>$150.00</h6>
-                                            <h6 className="l-through">$210.00</h6>
-                                        </div>
-                                        <div className="prd-bottom">
-
-                                            <a href="" className="social-info">
-                                                <span className="ti-bag"></span>
-                                                <p className="hover-text">add to bag</p>
-                                            </a>
-                                            <a href="" className="social-info">
-                                                <span className="lnr lnr-heart"></span>
-                                                <p className="hover-text">Wishlist</p>
-                                            </a>
-                                            <a href="" className="social-info">
-                                                <span className="lnr lnr-sync"></span>
-                                                <p className="hover-text">compare</p>
-                                            </a>
-                                            <a href="" className="social-info">
-                                                <span className="lnr lnr-move"></span>
-                                                <p className="hover-text">view more</p>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-3 col-md-6">
-                                <div className="single-product">
-                                    <img className="img-fluid" src="img/product/p5.jpg" alt="" />
+                                    <img className="img-fluid" src="img/items/g4.jpeg" alt="" />
                                     <div className="product-details">
                                         <h6>addidas New Hammer sole
 									for Sports person</h6>
@@ -178,7 +146,7 @@ export default class ProductsSection extends React.Component {
                             </div>
                             <div className="col-lg-3 col-md-6">
                                 <div className="single-product">
-                                    <img className="img-fluid" src="img/product/p6.jpg" alt="" />
+                                    <img className="img-fluid" src="img/items/g5.jpeg" alt="" />
                                     <div className="product-details">
                                         <h6>addidas New Hammer sole
 									for Sports person</h6>
@@ -210,7 +178,7 @@ export default class ProductsSection extends React.Component {
                             </div>
                             <div className="col-lg-3 col-md-6">
                                 <div className="single-product">
-                                    <img className="img-fluid" src="img/product/p7.jpg" alt="" />
+                                    <img className="img-fluid" src="img/items/g6.jpeg" alt="" />
                                     <div className="product-details">
                                         <h6>addidas New Hammer sole
 									for Sports person</h6>
@@ -242,7 +210,39 @@ export default class ProductsSection extends React.Component {
                             </div>
                             <div className="col-lg-3 col-md-6">
                                 <div className="single-product">
-                                    <img className="img-fluid" src="img/product/p8.jpg" alt="" />
+                                    <img className="img-fluid" src="img/items/g7.jpeg" alt="" />
+                                    <div className="product-details">
+                                        <h6>addidas New Hammer sole
+									for Sports person</h6>
+                                        <div className="price">
+                                            <h6>$150.00</h6>
+                                            <h6 className="l-through">$210.00</h6>
+                                        </div>
+                                        <div className="prd-bottom">
+
+                                            <a href="" className="social-info">
+                                                <span className="ti-bag"></span>
+                                                <p className="hover-text">add to bag</p>
+                                            </a>
+                                            <a href="" className="social-info">
+                                                <span className="lnr lnr-heart"></span>
+                                                <p className="hover-text">Wishlist</p>
+                                            </a>
+                                            <a href="" className="social-info">
+                                                <span className="lnr lnr-sync"></span>
+                                                <p className="hover-text">compare</p>
+                                            </a>
+                                            <a href="" className="social-info">
+                                                <span className="lnr lnr-move"></span>
+                                                <p className="hover-text">view more</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-3 col-md-6">
+                                <div className="single-product">
+                                    <img className="img-fluid" src="img/items/g8.jpeg" alt="" />
                                     <div className="product-details">
                                         <h6>addidas New Hammer sole
 									for Sports person</h6>
@@ -290,7 +290,7 @@ export default class ProductsSection extends React.Component {
                         <div className="row">
                             <div className="col-lg-3 col-md-6">
                                 <div className="single-product">
-                                    <img className="img-fluid" src="img/product/p6.jpg" alt="" />
+                                    <img className="img-fluid" src="img/items/g9.jpeg" alt="" />
                                     <div className="product-details">
                                         <h6>addidas New Hammer sole
 									for Sports person</h6>
@@ -322,7 +322,7 @@ export default class ProductsSection extends React.Component {
                             </div>
                             <div className="col-lg-3 col-md-6">
                                 <div className="single-product">
-                                    <img className="img-fluid" src="img/product/p8.jpg" alt="" />
+                                    <img className="img-fluid" src="img/items/g1.jpeg" alt="" />
                                     <div className="product-details">
                                         <h6>addidas New Hammer sole
 									for Sports person</h6>
@@ -354,7 +354,7 @@ export default class ProductsSection extends React.Component {
                             </div>
                             <div className="col-lg-3 col-md-6">
                                 <div className="single-product">
-                                    <img className="img-fluid" src="img/product/p3.jpg" alt="" />
+                                    <img className="img-fluid" src="img/items/g2.jpeg" alt="" />
                                     <div className="product-details">
                                         <h6>addidas New Hammer sole
 									for Sports person</h6>
@@ -386,7 +386,7 @@ export default class ProductsSection extends React.Component {
                             </div>
                             <div className="col-lg-3 col-md-6">
                                 <div className="single-product">
-                                    <img className="img-fluid" src="img/product/p5.jpg" alt="" />
+                                    <img className="img-fluid" src="img/items/g3.jpeg" alt="" />
                                     <div className="product-details">
                                         <h6>addidas New Hammer sole
 									for Sports person</h6>
@@ -418,7 +418,7 @@ export default class ProductsSection extends React.Component {
                             </div>
                             <div className="col-lg-3 col-md-6">
                                 <div className="single-product">
-                                    <img className="img-fluid" src="img/product/p1.jpg" alt="" />
+                                    <img className="img-fluid" src="img/items/g4.jpeg" alt="" />
                                     <div className="product-details">
                                         <h6>addidas New Hammer sole
 									for Sports person</h6>
@@ -450,7 +450,7 @@ export default class ProductsSection extends React.Component {
                             </div>
                             <div className="col-lg-3 col-md-6">
                                 <div className="single-product">
-                                    <img className="img-fluid" src="img/product/p4.jpg" alt="" />
+                                    <img className="img-fluid" src="img/items/g5.jpeg" alt="" />
                                     <div className="product-details">
                                         <h6>addidas New Hammer sole
 									for Sports person</h6>
@@ -482,7 +482,7 @@ export default class ProductsSection extends React.Component {
                             </div>
                             <div className="col-lg-3 col-md-6">
                                 <div className="single-product">
-                                    <img className="img-fluid" src="img/product/p1.jpg" alt="" />
+                                    <img className="img-fluid" src="img/items/g6.jpeg" alt="" />
                                     <div className="product-details">
                                         <h6>addidas New Hammer sole
 									for Sports person</h6>
@@ -514,7 +514,7 @@ export default class ProductsSection extends React.Component {
                             </div>
                             <div className="col-lg-3 col-md-6">
                                 <div className="single-product">
-                                    <img className="img-fluid" src="img/product/p8.jpg" alt="" />
+                                    <img className="img-fluid" src="img/items/g7.jpeg" alt="" />
                                     <div className="product-details">
                                         <h6>addidas New Hammer sole
 									for Sports person</h6>
