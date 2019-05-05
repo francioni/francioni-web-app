@@ -1,7 +1,8 @@
 const PAGES = {
     HOME: '#home',
     CATALOG: '#catalogo',
-    CONTACT: '#contacto'
+    CONTACT: '#contacto',
+    CART: '#carrito'
 }
 
 const header = {
@@ -97,6 +98,11 @@ const catalog = {
 }
 
 const contact = {
+    header,
+    featuresSection
+}
+
+const cart = {
     header
 }
 
@@ -105,5 +111,6 @@ export default {
     home,
     catalog,
     contact,
+    cart,
     header
 }

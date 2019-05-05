@@ -29,7 +29,7 @@ export default class HeaderSection extends React.Component {
                 <div className="main_menu">
                     <nav className="navbar navbar-expand-lg navbar-light main_box">
                         <div className="container">
-                            <a className="navbar-brand logo_h" href="index.html"><img style={{ width: '75px' }} src="img/logo.png" alt="" /></a>
+                            <a className="navbar-brand logo_h" href="index.html"><img style={{ width: '200px', 'padding-top': '15px' }} src="img/logo.png" alt="" /></a>
                             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span className="icon-bar"></span>

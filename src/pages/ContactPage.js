@@ -18,7 +18,7 @@ export default class ContactPage extends React.Component {
         return (
             <Fragment>
                 <HeaderSection data={data.header} />
-                <FeaturesSection />
+                <FeaturesSection data={data.featuresSection} />
                 <FooterSection />
             </Fragment>
         );
