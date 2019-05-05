@@ -18,13 +18,11 @@ export default class HomePage extends React.Component {
         return (
             <Fragment>
                 <HeaderSection data={data.header} />
-                <BannerSection />
-                <FeaturesSection />
+                <BannerSection data={data.bannerSection} />
+                <FeaturesSection data={data.featuresSection} />
                 <CategoriesSection />
                 <ProductsSection />
-                <ExclusiveDealsSection />
                 <BrandSection />
-                <RelatedProducts />
                 <FooterSection />
             </Fragment>
         );

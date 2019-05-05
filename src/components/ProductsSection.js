@@ -31,7 +31,7 @@ export default class ProductsSection extends React.Component {
 
                                             <a href="" className="social-info">
                                                 <span className="ti-bag"></span>
-                                                <p className="hover-text">add to bag</p>
+                                                <p className="hover-text">Agregar al carrito</p>
                                             </a>
                                             <a href="" className="social-info">
                                                 <span className="lnr lnr-heart"></span>
@@ -63,7 +63,7 @@ export default class ProductsSection extends React.Component {
 
                                             <a href="" className="social-info">
                                                 <span className="ti-bag"></span>
-                                                <p className="hover-text">add to bag</p>
+                                                <p className="hover-text">Agregar al carrito</p>
                                             </a>
                                             <a href="" className="social-info">
                                                 <span className="lnr lnr-heart"></span>
@@ -94,7 +94,7 @@ export default class ProductsSection extends React.Component {
                                         <div className="prd-bottom">
                                             <a href="" className="social-info">
                                                 <span className="ti-bag"></span>
-                                                <p className="hover-text">add to bag</p>
+                                                <p className="hover-text">Agregar al carrito</p>
                                             </a>
                                             <a href="" className="social-info">
                                                 <span className="lnr lnr-heart"></span>
@@ -126,7 +126,7 @@ export default class ProductsSection extends React.Component {
 
                                             <a href="" className="social-info">
                                                 <span className="ti-bag"></span>
-                                                <p className="hover-text">add to bag</p>
+                                                <p className="hover-text">Agregar al carrito</p>
                                             </a>
                                             <a href="" className="social-info">
                                                 <span className="lnr lnr-heart"></span>
@@ -158,7 +158,7 @@ export default class ProductsSection extends React.Component {
 
                                             <a href="" className="social-info">
                                                 <span className="ti-bag"></span>
-                                                <p className="hover-text">add to bag</p>
+                                                <p className="hover-text">Agregar al carrito</p>
                                             </a>
                                             <a href="" className="social-info">
                                                 <span className="lnr lnr-heart"></span>
@@ -190,7 +190,7 @@ export default class ProductsSection extends React.Component {
 
                                             <a href="" className="social-info">
                                                 <span className="ti-bag"></span>
-                                                <p className="hover-text">add to bag</p>
+                                                <p className="hover-text">Agregar al carrito</p>
                                             </a>
                                             <a href="" className="social-info">
                                                 <span className="lnr lnr-heart"></span>
@@ -222,7 +222,7 @@ export default class ProductsSection extends React.Component {
 
                                             <a href="" className="social-info">
                                                 <span className="ti-bag"></span>
-                                                <p className="hover-text">add to bag</p>
+                                                <p className="hover-text">Agregar al carrito</p>
                                             </a>
                                             <a href="" className="social-info">
                                                 <span className="lnr lnr-heart"></span>
@@ -254,7 +254,7 @@ export default class ProductsSection extends React.Component {
 
                                             <a href="" className="social-info">
                                                 <span className="ti-bag"></span>
-                                                <p className="hover-text">add to bag</p>
+                                                <p className="hover-text">Agregar al carrito</p>
                                             </a>
                                             <a href="" className="social-info">
                                                 <span className="lnr lnr-heart"></span>
@@ -302,7 +302,7 @@ export default class ProductsSection extends React.Component {
 
                                             <a href="" className="social-info">
                                                 <span className="ti-bag"></span>
-                                                <p className="hover-text">add to bag</p>
+                                                <p className="hover-text">Agregar al carrito</p>
                                             </a>
                                             <a href="" className="social-info">
                                                 <span className="lnr lnr-heart"></span>
@@ -334,7 +334,7 @@ export default class ProductsSection extends React.Component {
 
                                             <a href="" className="social-info">
                                                 <span className="ti-bag"></span>
-                                                <p className="hover-text">add to bag</p>
+                                                <p className="hover-text">Agregar al carrito</p>
                                             </a>
                                             <a href="" className="social-info">
                                                 <span className="lnr lnr-heart"></span>
@@ -366,7 +366,7 @@ export default class ProductsSection extends React.Component {
 
                                             <a href="" className="social-info">
                                                 <span className="ti-bag"></span>
-                                                <p className="hover-text">add to bag</p>
+                                                <p className="hover-text">Agregar al carrito</p>
                                             </a>
                                             <a href="" className="social-info">
                                                 <span className="lnr lnr-heart"></span>
@@ -398,7 +398,7 @@ export default class ProductsSection extends React.Component {
 
                                             <a href="" className="social-info">
                                                 <span className="ti-bag"></span>
-                                                <p className="hover-text">add to bag</p>
+                                                <p className="hover-text">Agregar al carrito</p>
                                             </a>
                                             <a href="" className="social-info">
                                                 <span className="lnr lnr-heart"></span>
@@ -430,7 +430,7 @@ export default class ProductsSection extends React.Component {
 
                                             <a href="" className="social-info">
                                                 <span className="ti-bag"></span>
-                                                <p className="hover-text">add to bag</p>
+                                                <p className="hover-text">Agregar al carrito</p>
                                             </a>
                                             <a href="" className="social-info">
                                                 <span className="lnr lnr-heart"></span>
@@ -462,7 +462,7 @@ export default class ProductsSection extends React.Component {
 
                                             <a href="" className="social-info">
                                                 <span className="ti-bag"></span>
-                                                <p className="hover-text">add to bag</p>
+                                                <p className="hover-text">Agregar al carrito</p>
                                             </a>
                                             <a href="" className="social-info">
                                                 <span className="lnr lnr-heart"></span>
@@ -494,7 +494,7 @@ export default class ProductsSection extends React.Component {
 
                                             <a href="" className="social-info">
                                                 <span className="ti-bag"></span>
-                                                <p className="hover-text">add to bag</p>
+                                                <p className="hover-text">Agregar al carrito</p>
                                             </a>
                                             <a href="" className="social-info">
                                                 <span className="lnr lnr-heart"></span>
@@ -526,7 +526,7 @@ export default class ProductsSection extends React.Component {
 
                                             <a href="" className="social-info">
                                                 <span className="ti-bag"></span>
-                                                <p className="hover-text">add to bag</p>
+                                                <p className="hover-text">Agregar al carrito</p>
                                             </a>
                                             <a href="" className="social-info">
                                                 <span className="lnr lnr-heart"></span>

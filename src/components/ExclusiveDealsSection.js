@@ -48,7 +48,7 @@ export default class ExclusiveDealsSection extends React.Component {
 									for Sports person</h4>
                                         <div className="add-bag d-flex align-items-center justify-content-center">
                                             <a className="add-btn" href=""><span className="ti-bag"></span></a>
-                                            <span className="add-text text-uppercase">Add to Bag</span>
+                                            <span className="add-text text-uppercase">Agregar al carrito</span>
                                         </div>
                                     </div>
                                 </div>
@@ -63,7 +63,7 @@ export default class ExclusiveDealsSection extends React.Component {
 									for Sports person</h4>
                                         <div className="add-bag d-flex align-items-center justify-content-center">
                                             <a className="add-btn" href=""><span className="ti-bag"></span></a>
-                                            <span className="add-text text-uppercase">Add to Bag</span>
+                                            <span className="add-text text-uppercase">Agregar al carrito</span>
                                         </div>
                                     </div>
                                 </div>

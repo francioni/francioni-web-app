@@ -14,6 +14,7 @@ export default class App extends React.Component {
   render() {
     const { PAGES, home, catalog, contact } = data;
     const { HOME, CATALOG, CONTACT } = PAGES;
+    const cuit = localStorage.getItem('cuit');
     switch (getCurrentPage()) {
       case HOME: return <HomePage data={home} currentPage={PAGES.HOME} />
       case CATALOG: return <CatalogPage data={catalog} currentPage={PAGES.CATALOG} />
