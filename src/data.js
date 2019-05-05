@@ -38,8 +38,28 @@ const header = {
     ]
 }
 
+
+const bannerSection = {
+    items : [
+        {
+            title: "Producto1",
+            description: "Descripcion de producto en banner 1",
+            price: "$412",
+            image: "img/items/g9.jpeg"
+        },
+        {
+            title: "Producto2",
+            description: "Descripcion de producto en banner 1",
+            price: "$412",
+            image: "img/banner/banner-img.png"
+        }
+    ]
+}
+
+
 const home = {
-    header
+    header,
+    bannerSection
 }
 
 const catalog = {
