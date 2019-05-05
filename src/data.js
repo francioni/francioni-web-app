@@ -15,7 +15,7 @@ const header = {
             href: '#catalogo',
             options: [
                 {
-                    title: 'catalogo 122'
+                    title: 'catalogo 22'
                 },
                 {
                     title: 'catalogo 2'
