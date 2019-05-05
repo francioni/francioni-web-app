@@ -19,7 +19,7 @@ export default class HomePage extends React.Component {
             <Fragment>
                 <HeaderSection data={data.header} />
                 <BannerSection data={data.bannerSection} />
-                <FeaturesSection />
+                <FeaturesSection data={data.featuresSection} />
                 <CategoriesSection />
                 <ProductsSection />
                 <BrandSection />

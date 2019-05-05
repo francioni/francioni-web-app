@@ -23,7 +23,7 @@ export default class BannerSection extends React.Component {
                                                         <p>{item.description}</p>
                                                         <div className="add-bag d-flex align-items-center">
                                                             <a className="add-btn" href=""><span className="lnr lnr-cross"></span></a>
-                                                            <span className="add-text text-uppercase">Add to Bag</span>
+                                                            <span className="add-text text-uppercase">Agregar al carrito</span>
                                                         </div>
                                                     </div>
                                                 </div>
