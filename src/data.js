@@ -48,7 +48,7 @@ const headerSection = {
 const bannerSection = {
     items : [
         {
-            title: "Anteojos Fedra Modelo 2019",
+            title: "Anteojos Fedra Modelo 2020",
             description: "Antireflex, los mejores anteojos de la line premium Fedra 2019",
             price: "$412",
             image: "img/items/g9.jpeg"
