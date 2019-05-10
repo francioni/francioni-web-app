@@ -1,11 +1,13 @@
 const PAGES = {
     HOME: '#home',
     CATALOG: '#catalogo',
+    PROMOTIONS: '#promociones',
     CONTACT: '#contacto',
+    PRICES: '#precios',
     CART: '#carrito'
 }
 
-const header = {
+const headerSection = {
     items: [
         {
             title: 'home',
@@ -16,25 +18,24 @@ const header = {
             href: '#catalogo',
             options: [
                 {
-                    title: 'catalogo 22'
+                    title: 'recetados'
                 },
                 {
-                    title: 'catalogo 2'
-                },
-                {
-                    title: 'catalogo 3'
-                },
-                {
-                    title: 'catalogo 4'
-                },
-                {
-                    title: 'catalogo 5'
+                    title: 'sol'
                 }
             ]
         },
         {
+            title: 'promociones',
+            href: '#promociones',
+        },
+        {
             title: 'contacto',
             href: '#contacto',
+        },
+        {
+            title: 'politica de precios',
+            href: '#precios',
         },
         {
             title: 'carrito',
@@ -47,7 +48,7 @@ const header = {
 const bannerSection = {
     items : [
         {
-            title: "Anteojos Fedra Modelo 2019",
+            title: "Anteojos Fedra Modelo 2020",
             description: "Antireflex, los mejores anteojos de la line premium Fedra 2019",
             price: "$412",
             image: "img/items/g9.jpeg"
@@ -86,24 +87,76 @@ const featuresSection = {
     ]
 }
 
+const footerSection = {
+    aboutUsTitle: 'ABOUT_US_ADD',
+    aboutUsDescription: 'DESCRIPTION_ADD',
+    corporateTitle: 'CORPORATE_TITLE_ADD',
+    corporateDescription: 'CORPORATE_DESCRIPTION_ADD',
+    instagramTitle: 'INSTAGRAM_TITLE_ADD',
+    instagramItems: [
+        {
+            imageUrl: 'img/i1.jpg',
+            instagramUrl: 'https://www.instagram.com/'
+        },
+        {
+            imageUrl: 'img/i2.jpg',
+            instagramUrl: 'https://www.instagram.com/'
+        },
+        {
+            imageUrl: 'img/i3.jpg',
+            instagramUrl: 'https://www.instagram.com/'
+        },
+        {
+            imageUrl: 'img/i4.jpg',
+            instagramUrl: 'https://www.instagram.com/'
+        },
+        {
+            imageUrl: 'img/i5.jpg',
+            instagramUrl: 'https://www.instagram.com/'
+        },
+        {
+            imageUrl: 'img/i6.jpg',
+            instagramUrl: 'https://www.instagram.com/'
+        },
+        {
+            imageUrl: 'img/i7.jpg',
+            instagramUrl: 'https://www.instagram.com/'
+        },
+        {
+            imageUrl: 'img/i8.jpg',
+            instagramUrl: 'https://www.instagram.com/'
+        }
+    ],
+    letUsBeSocialTitle: 'LET_US_BE_SOCIAL_ADD',
+    followUsTitle: 'FOLLOW_US_ADD',
+    facebookUrl: 'https://www.google.com',
+    twitterUrl: 'https://www.google.com',
+    dribbleUrl: 'https://www.google.com',
+    behanceUrl: 'https://www.google.com'
+}
+
 
 const home = {
-    header,
+    headerSection,
     bannerSection,
-    featuresSection
+    featuresSection,
+    footerSection
 }
 
 const catalog = {
-    header
+    headerSection,
+    footerSection
 }
 
 const contact = {
-    header,
-    featuresSection
+    headerSection,
+    featuresSection,
+    footerSection
 }
 
 const cart = {
-    header
+    headerSection,
+    footerSection
 }
 
 export default {
@@ -112,5 +165,5 @@ export default {
     catalog,
     contact,
     cart,
-    header
+    footerSection
 }

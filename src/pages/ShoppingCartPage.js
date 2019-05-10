@@ -11,9 +11,9 @@ export default class ShoppingCartPage extends React.Component {
         const { data } = this.props;
         return (
             <Fragment>
-                <HeaderSection data={data.header} />
+                <HeaderSection data={data.headerSection} />
                 <ShoppingCart />
-                <FooterSection />
+                <FooterSection data={data.footerSection} />
             </Fragment>
         );
     }
