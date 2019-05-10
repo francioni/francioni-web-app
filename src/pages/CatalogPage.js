@@ -17,9 +17,9 @@ export default class CatalogPage extends React.Component {
         const { data } = this.props;
         return (
             <Fragment>
-                <HeaderSection data={data.header} />
+                <HeaderSection data={data.headerSection} />
                 <ProductsSection />
-                <FooterSection />
+                <FooterSection data={data.footerSection} />
             </Fragment>
         );
     }

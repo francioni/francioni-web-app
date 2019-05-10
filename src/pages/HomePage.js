@@ -10,20 +10,15 @@ import RelatedProducts from '../components/RelatedProducts';
 import FooterSection from '../components/FooterSection';
 
 export default class HomePage extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         const { data } = this.props;
         return (
             <Fragment>
-                <HeaderSection data={data.header} />
+                <HeaderSection data={data.headerSection} />
                 <BannerSection data={data.bannerSection} />
                 <FeaturesSection data={data.featuresSection} />
-                <CategoriesSection />
                 <ProductsSection />
-                <BrandSection />
-                <FooterSection />
+                <FooterSection data={data.footerSection} />
             </Fragment>
         );
     }
