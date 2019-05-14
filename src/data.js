@@ -18,7 +18,7 @@ const headerSection = {
             href: '#catalogo',
             options: [
                 {
-                    title: 'recetados'
+                    title: 'recetados2'
                 },
                 {
                     title: 'sol'
