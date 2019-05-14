@@ -4,7 +4,7 @@
 <head>
   <title>Glass Shop</title>
   <meta charset="utf-8" />
-  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.png" />
   <meta name="theme-color" content="#000000" />
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -24,24 +24,109 @@
   <link rel="stylesheet" href="%PUBLIC_URL%/css/ion.rangeSlider.skinFlat.css" />
   <link rel="stylesheet" href="%PUBLIC_URL%/css/magnific-popup.css">
   <link rel="stylesheet" href="%PUBLIC_URL%/css/main.css">
+  <style type="text/css">
+    .skins {
+      position: fixed;
+      top: 190px;
+      left: -120px;
+      transition: .3s ease-in-out;
+      z-index: 1000;
+    }
+
+    .skins:hover {
+      left: 0;
+    }
+
+    .skin-colors {
+      list-style: none;
+      padding: 20px;
+      margin: 0;
+      background-color: #fff;
+      width: 120px;
+      border: 1px solid #e7e7e7;
+    }
+
+    .skin-colors li {
+      position: relative;
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      margin: -3px;
+      line-height: 0;
+      transition: .3s ease-in-out;
+    }
+
+    .skin-colors li:hover {
+      opacity: .7;
+    }
+
+    .skin-colors li.active::before {
+      content: "\f00c";
+      font-family: FontAwesome;
+      font-size: 20px;
+      width: 32px;
+      line-height: 32px;
+      text-align: center;
+      position: absolute;
+      color: #fff;
+    }
+
+    .skin-toggler {
+      position: absolute;
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      right: -49px;
+      top: 0;
+      background-color: #fff;
+      font-size: 30px;
+      text-align: center;
+      line-height: 50px;
+      color: #888;
+      border: 1px solid #e7e7e7;
+      border-left: 0;
+    }
+
+    .skin-toggler .fa {
+      transform: rotate(30deg);
+      -webkit-transition: 2s;
+      -moz-transition: 2s;
+      -ms-transition: 2s;
+      -o-transition: 2s;
+      transition: 2s;
+      animation: gear 1s infinite;
+    }
+
+    @keyframes gear {
+      0% {
+        transform: rotate(0deg)
+      }
+
+      100% {
+        transform: rotate(360deg)
+      }
+    }
+  </style>
 </head>
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
   <script src="js/vendor/jquery-2.2.4.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
-	 crossorigin="anonymous"></script>
-	<script src="%PUBLIC_URL%/js/vendor/bootstrap.min.js"></script>
-	<script src="%PUBLIC_URL%/js/jquery.ajaxchimp.min.js"></script>
-	<script src="%PUBLIC_URL%/js/jquery.nice-select.min.js"></script>
-	<script src="%PUBLIC_URL%/js/jquery.sticky.js"></script>
-	<script src="%PUBLIC_URL%/js/nouislider.min.js"></script>
-	<script src="%PUBLIC_URL%/js/jquery.magnific-popup.min.js"></script>
-	<script src="%PUBLIC_URL%/js/owl.carousel.min.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-	<script src="%PUBLIC_URL%/js/gmaps.min.js"></script>
-	<script src="%PUBLIC_URL%/js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+    integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+    crossorigin="anonymous"></script>
+  <script src="%PUBLIC_URL%/js/vendor/bootstrap.min.js"></script>
+  <script src="%PUBLIC_URL%/js/jquery.ajaxchimp.min.js"></script>
+  <script src="%PUBLIC_URL%/js/jquery.nice-select.min.js"></script>
+  <script src="%PUBLIC_URL%/js/jquery.sticky.js"></script>
+  <script src="%PUBLIC_URL%/js/nouislider.min.js"></script>
+  <script src="%PUBLIC_URL%/js/jquery.magnific-popup.min.js"></script>
+  <script src="%PUBLIC_URL%/js/owl.carousel.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+  <script src="%PUBLIC_URL%/js/gmaps.min.js"></script>
+  <script src="%PUBLIC_URL%/js/main.js"></script>
 </body>
 
 </html>
