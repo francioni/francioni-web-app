@@ -7,6 +7,63 @@ const PAGES = {
     CART: '#carrito'
 }
 
+const products = [
+    {
+        name: 'Anteojos Fedra Modelo 2020',
+        description: 'Antireflex, los mejores anteojos de la line premium Fedra 2019',
+        type: 'LIBRE',
+        ring: 'ENTERO',
+        segment: 'CABALLERO',
+        material: 'METAL',
+        colors: 'red, blue, yellow',
+        caliber: 'TBD',
+        price: '412',
+        strikethorughPrice: '456',
+        image: 'img/items/g9.jpeg',
+        model: '1549-001',
+        brand: 'Route 66',
+        isPromotion: true,
+        category: 'RECETADOS',
+        isPromoted: true
+    },
+    {
+        name: 'Producto 2',
+        description: 'Product 2 Description',
+        type: 'RECETA',
+        ring: 'ENTERO',
+        segment: 'DAMA',
+        material: 'PLASTIC',
+        colors: 'red',
+        caliber: 'TBD',
+        price: '323',
+        strikethorughPrice: '456',
+        image: 'img/banner/banner-img.png',
+        model: '1549-00223',
+        brand: 'Ray Van',
+        isPromotion: false,
+        category: 'RECETADOS',
+        isPromoted: true
+    },
+    {
+        name: 'Producto SOL',
+        description: 'Descripcion Producto SOL',
+        type: 'LIBRE',
+        ring: 'PLASTICO',
+        segment: 'CABALLERO',
+        material: 'METAL',
+        colors: 'yellow, pink',
+        caliber: 'TBD',
+        price: '567',
+        strikethorughPrice: '456',
+        image: 'img/items/g8.jpeg',
+        model: '12345-332',
+        brand: 'Anteojos Burma',
+        isPromotion: false,
+        category: 'SOL',
+        isPromoted: false
+    }
+]
+
 const headerSection = {
     items: [
         {
@@ -46,20 +103,7 @@ const headerSection = {
 
 
 const bannerSection = {
-    items : [
-        {
-            title: "Anteojos Fedra Modelo 2020",
-            description: "Antireflex, los mejores anteojos de la line premium Fedra 2019",
-            price: "$412",
-            image: "img/items/g9.jpeg"
-        },
-        {
-            title: "Producto2",
-            description: "Descripcion de producto en banner 1",
-            price: "$412",
-            image: "img/banner/banner-img.png"
-        }
-    ]
+    items : products
 }
 
 const featuresSection = {
@@ -165,5 +209,6 @@ export default {
     catalog,
     contact,
     cart,
-    footerSection
+    footerSection,
+    products
 }

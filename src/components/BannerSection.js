@@ -1,10 +1,6 @@
 import React from 'react';
 
 export default class BannerSection extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         const { data } = this.props;
         return (
@@ -14,7 +10,7 @@ export default class BannerSection extends React.Component {
                         <div className="col-lg-12">
                             <div className="active-banner-slider owl-carousel">
                                 {
-                                    data.items.map((item, index) => {
+                                    data.items.filter(item => item.isPromoted).map((item, index) => {
                                         return (
                                             <div key={index} className="row single-slide">
                                                 <div className="col-lg-5">

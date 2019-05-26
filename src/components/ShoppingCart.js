@@ -1,7 +1,14 @@
 import React from "react";
+const getCart = require('../utils').getCart;
+const getCartTotalPrice = require('../utils').getCartTotalPrice;
+const getCartItemTotalPrice = require('../utils').getCartItemTotalPrice;
+const incrementItemQuantityInCartByOne = require('../utils').incrementItemQuantityInCartByOne;
+const decrementItemQuantityInCartByOne = require('../utils').decrementItemQuantityInCartByOne;
+const removeItemFromCart = require('../utils').removeItemFromCart;
 
 export default class ShoppingCart extends React.Component {
   render() {
+    const cart = getCart();
     return (
       <section class="cart_area">
         <div class="container">
@@ -18,162 +25,64 @@ export default class ShoppingCart extends React.Component {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>
-                      <div class="media">
-                        <div class="d-flex">
-                          <img src="img/cart.jpg" alt="" />
-                        </div>
-                        <div class="media-body">
-                          <p>Minimalistic shop for multipurpose use</p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <h5>$360.00</h5>
-                    </td>
-                    <td>
-                      <div class="product_count">
-                        <input
-                          type="text"
-                          name="qty"
-                          id="sst"
-                          maxlength="12"
-                          value="1"
-                          title="Quantity:"
-                          class="input-text qty"
-                        />
-                        <button
-                          onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-                          class="increase items-count"
-                          type="button"
-                        >
-                          <i class="lnr lnr-chevron-up" />
-                        </button>
-                        <button
-                          onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-                          class="reduced items-count"
-                          type="button"
-                        >
-                          <i class="lnr lnr-chevron-down" />
-                        </button>
-                      </div>
-                    </td>
-                    <td>
-                      <h5>$720.00</h5>
-                    </td>
-                    <td>
-                      <div class="cupon_text d-flex align-items-center">
-                        <a class="primary-btn" href="#">
-                          eliminar
-                        </a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="media">
-                        <div class="d-flex">
-                          <img src="img/cart.jpg" alt="" />
-                        </div>
-                        <div class="media-body">
-                          <p>Minimalistic shop for multipurpose use</p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <h5>$360.00</h5>
-                    </td>
-                    <td>
-                      <div class="product_count">
-                        <input
-                          type="text"
-                          name="qty"
-                          id="sst"
-                          maxlength="12"
-                          value="1"
-                          title="Quantity:"
-                          class="input-text qty"
-                        />
-                        <button
-                          onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-                          class="increase items-count"
-                          type="button"
-                        >
-                          <i class="lnr lnr-chevron-up" />
-                        </button>
-                        <button
-                          onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-                          class="reduced items-count"
-                          type="button"
-                        >
-                          <i class="lnr lnr-chevron-down" />
-                        </button>
-                      </div>
-                    </td>
-                    <td>
-                      <h5>$720.00</h5>
-                    </td>
-                    <td>
-                      <div class="cupon_text d-flex align-items-center">
-                        <a class="primary-btn" href="#">
-                          eliminar
-                        </a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="media">
-                        <div class="d-flex">
-                          <img src="img/cart.jpg" alt="" />
-                        </div>
-                        <div class="media-body">
-                          <p>Minimalistic shop for multipurpose use</p>
-                        </div>
-                      </div>
-                    </td>
-                    <td>
-                      <h5>$360.00</h5>
-                    </td>
-                    <td>
-                      <div class="product_count">
-                        <input
-                          type="text"
-                          name="qty"
-                          id="sst"
-                          maxlength="12"
-                          value="1"
-                          title="Quantity:"
-                          class="input-text qty"
-                        />
-                        <button
-                          onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-                          class="increase items-count"
-                          type="button"
-                        >
-                          <i class="lnr lnr-chevron-up" />
-                        </button>
-                        <button
-                          onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-                          class="reduced items-count"
-                          type="button"
-                        >
-                          <i class="lnr lnr-chevron-down" />
-                        </button>
-                      </div>
-                    </td>
-                    <td>
-                      <h5>$720.00</h5>
-                    </td>
-                    <td>
-                      <div class="cupon_text d-flex align-items-center">
-                        <a class="primary-btn" href="#">
-                          eliminar
-                        </a>
-                      </div>
-                    </td>
-                  </tr>
+                  {
+                    cart.map(cartItem => {
+                      return (
+                        <tr key={cartItem.item.model}>
+                          <td>
+                            <div class="media">
+                              <div class="d-flex">
+                                <img style={{'max-height': '100px', 'height': '70%', 'width': 'auto'}} src={cartItem.item.image} alt="" />
+                              </div>
+                              <div class="media-body">
+                                <p>{cartItem.item.description}</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <h5>${cartItem.item.price}</h5>
+                          </td>
+                          <td>
+                            <div class="product_count">
+                              <input
+                                type="text"
+                                name="qty"
+                                id="sst"
+                                maxlength="9999"
+                                value={cartItem.quantity}
+                                title="Cantidad:"
+                                class="input-text qty"
+                              />
+                              <button
+                                onClick={() => incrementItemQuantityInCartByOne(cartItem.item)}
+                                class="increase items-count"
+                                type="button"
+                              >
+                                <i class="lnr lnr-chevron-up" />
+                              </button>
+                              <button
+                                onClick={() => decrementItemQuantityInCartByOne(cartItem.item)}
+                                class="reduced items-count"
+                                type="button"
+                              >
+                                <i class="lnr lnr-chevron-down" />
+                              </button>
+                            </div>
+                          </td>
+                          <td>
+                            <h5>${getCartItemTotalPrice(cartItem.item, cartItem.quantity)}</h5>
+                          </td>
+                          <td>
+                            <div class="cupon_text d-flex align-items-center" onClick={() => removeItemFromCart(cartItem.item)}>
+                              <a class="primary-btn" href="#">
+                                eliminar
+                              </a>
+                            </div>
+                          </td>
+                        </tr>
+                      )
+                    })
+                  }
                   <tr>
                     <td />
                     <td />
@@ -181,7 +90,7 @@ export default class ShoppingCart extends React.Component {
                       <h5>Subtotal</h5>
                     </td>
                     <td>
-                      <h5>$2160.00</h5>
+                      <h5>${getCartTotalPrice()}</h5>
                     </td>
                   </tr>
                   <tr>
