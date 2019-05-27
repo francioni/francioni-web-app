@@ -1,6 +1,8 @@
 import React from 'react';
 import data from '../data';
 const addItemToCart = require('../utils').addItemToCart;
+const isItemAlreadyOnCart = require('../utils').isItemAlreadyOnCart;
+const getCart = require('../utils').getCart;
 
 export default class ProductsSection extends React.Component {
     render() {
@@ -27,14 +29,21 @@ export default class ProductsSection extends React.Component {
                                                 <div className="product-details">
                                                     <h6>{product.name}</h6>
                                                     <div className="price">
-                                                        <h6>{product.price}</h6>
-                                                        <h6 className="l-through">{product.strikethorughPrice}</h6>
+                                                        <h6>${product.price}</h6>
+                                                        <h6 className="l-through">${product.strikethorughPrice}</h6>
                                                     </div>
                                                     <div className="prd-bottom">
-                                                        <div href="" className="social-info">
-                                                            <span onClick={() => addItemToCart(product, 1)} className="ti-bag" style={{'cursor':'pointer'}}></span>
-                                                            <p className="hover-text">Agregar</p>
-                                                        </div>
+                                                        {
+                                                            isItemAlreadyOnCart(product, getCart()) ?
+                                                            <div style={{'width': '80px'}} href="" className="social-info">
+                                                                <p>Agregado</p>
+                                                            </div>
+                                                                :
+                                                            <div style={{'width': '120px'}} href="" className="social-info">
+                                                                <span onClick={() => addItemToCart(product, 1)} className="ti-bag" style={{'cursor':'pointer'}}></span>
+                                                                <p className="hover-text">Agregar</p>
+                                                            </div>
+                                                        }
                                                     </div>
                                                 </div>
                                             </div>
@@ -66,13 +75,20 @@ export default class ProductsSection extends React.Component {
                                                     <h6>{product.name}</h6>
                                                     <div className="price">
                                                         <h6>{product.price}</h6>
-                                                        <h6 className="l-through">{product.strikethorughPrice}</h6>
+                                                        <h6 className="l-through">${product.strikethorughPrice}</h6>
                                                     </div>
                                                     <div className="prd-bottom">
-                                                        <a href="" className="social-info">
-                                                            <span className="ti-bag"></span>
-                                                            <p className="hover-text">Agregar</p>
-                                                        </a>
+                                                        {
+                                                            isItemAlreadyOnCart(product, getCart()) ?
+                                                            <div style={{'width': '80px'}} href="" className="social-info">
+                                                                <p>Agregado</p>
+                                                            </div>
+                                                                :
+                                                            <div style={{'width': '80px'}} href="" className="social-info">
+                                                                <span onClick={() => addItemToCart(product, 1)} className="ti-bag" style={{'cursor':'pointer'}}></span>
+                                                                <p >Agregar</p>
+                                                            </div>
+                                                        }
                                                     </div>
                                                 </div>
                                             </div>

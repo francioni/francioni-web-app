@@ -5,6 +5,7 @@ const getCartItemTotalPrice = require('../utils').getCartItemTotalPrice;
 const incrementItemQuantityInCartByOne = require('../utils').incrementItemQuantityInCartByOne;
 const decrementItemQuantityInCartByOne = require('../utils').decrementItemQuantityInCartByOne;
 const removeItemFromCart = require('../utils').removeItemFromCart;
+const generateCartOrder = require('../utils').generateCartOrder;
 
 export default class ShoppingCart extends React.Component {
   render() {
@@ -96,9 +97,8 @@ export default class ShoppingCart extends React.Component {
                   <tr>
                     <td>
                       <div class="cupon_text d-flex align-items-center">
-                        <a class="primary-btn" href="#">
-                          Generar Pedido
-                        </a>
+                        <a className="primary-btn" href={generateCartOrder()}>
+                        Generar Pedido</a>
                       </div>
                     </td>
                   </tr>

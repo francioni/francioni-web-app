@@ -18,6 +18,14 @@ export const getCart = () => {
 
 export const getCartItemTotalPrice = (item, quantity) => parseInt(item.price) * parseInt(quantity);
 
+export const isItemAlreadyOnCart = (item, cart) => {
+    let isInCart = false;
+    cart.forEach(cartItem => {
+        if (cartItem.item.model === item.model) isInCart = true;
+    });
+    return isInCart;
+}
+
 export const incrementItemQuantityInCartByOne = item => {
     let cart = getCart();
     cart.forEach(cartItem => {
@@ -65,15 +73,24 @@ export const removeItemFromCart = item => {
 
 export const addItemToCart = (item, quantity) => {
     let cart = getCart();
-    const _isAlreadyOnCart = (model, cart) => {
-        let isInCart = false;
-        cart.forEach(cartItem => {
-            if (cartItem.item.model === model) isInCart = true;
-        });
-        return isInCart;
-    }
-    if (!_isAlreadyOnCart(item.model, cart)) {
+    if (!isItemAlreadyOnCart(item, cart)) {
         cart.push({ item, quantity });
         localStorage.setItem('cart', JSON.stringify(cart));
     }
+    window.location.reload();
+}
+
+export const generateCartOrder = () => {
+    let body = '';
+    const cart = getCart();
+    cart.forEach(cartItem => {
+        body += cartItem.item.model + '|' + cartItem.item.name + '|' + cartItem.quantity;
+        body += '%0D%0A'; 
+    });
+    const subject = localStorage.getItem('cuit');
+    const to = 'leonardodpalumbo@gmail.com ';
+    const cc = 'leonardodpalumbo@gmail.com ';
+    const bcc = 'leonardodpalumbo@gmail.com ';
+
+    return `mailto:${to}?cc=${cc}&bcc=${bcc}&subject=${subject}&body=${body}`;
 }
