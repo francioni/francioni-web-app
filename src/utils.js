@@ -16,7 +16,18 @@ export const getCart = () => {
     return [];
 }
 
-export const getCartItemTotalPrice = (item, quantity) => parseInt(item.price) * parseInt(quantity);
+export const getCartItemTotalPrice = (item, quantity) => {
+    return parseInt(item.price) * parseInt(quantity);
+}
+
+export const getCartTotalPrice = () => {
+    const cart = getCart();
+    let totalPrice = 0;
+    cart.forEach(cartItem => {
+        totalPrice += parseInt(cartItem.item.price) * parseInt(cartItem.quantity);
+    });
+    return totalPrice;
+}
 
 export const isItemAlreadyOnCart = (item, cart) => {
     let isInCart = false;
@@ -50,13 +61,20 @@ export const decrementItemQuantityInCartByOne = item => {
     window.location.reload();
 }
 
-export const getCartTotalPrice = () => {
-    const cart = getCart();
-    let totalPrice = 0;
-    cart.forEach(cartItem => {
-        totalPrice += totalPrice + (parseInt(cartItem.item.price) * parseInt(cartItem.quantity));
-    });
-    return totalPrice;
+export const setCurrentlyEditedCartItemModel = (id) => {
+    localStorage.setItem('currentlyEditedCartItemModel', id);
+};
+
+export const getCurrentlyEditedCartItemModel = () => localStorage.getItem('currentlyEditedCartItemModel');
+
+export const incrementItemQuantityManually = (event) => {
+    const updatedItemQuantity = parseInt(event.target.value);
+    let cart = getCart();
+    cart.forEach((cartItem, index) => {
+        if(cartItem.item.model === getCurrentlyEditedCartItemModel()) cart[index].quantity = updatedItemQuantity;
+    }) 
+    localStorage.setItem('cart', JSON.stringify(cart));
+    window.location.reload();
 }
 
 export const removeItemFromCart = item => {

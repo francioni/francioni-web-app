@@ -4,6 +4,9 @@ const getCartTotalPrice = require('../utils').getCartTotalPrice;
 const getCartItemTotalPrice = require('../utils').getCartItemTotalPrice;
 const incrementItemQuantityInCartByOne = require('../utils').incrementItemQuantityInCartByOne;
 const decrementItemQuantityInCartByOne = require('../utils').decrementItemQuantityInCartByOne;
+const incrementItemQuantityManually = require('../utils').incrementItemQuantityManually;
+const setCurrentlyEditedCartItemModel = require('../utils').setCurrentlyEditedCartItemModel;
+const getCurrentlyEditedCartItemModel = require('../utils').getCurrentlyEditedCartItemModel;
 const removeItemFromCart = require('../utils').removeItemFromCart;
 const generateCartOrder = require('../utils').generateCartOrder;
 
@@ -49,10 +52,11 @@ export default class ShoppingCart extends React.Component {
                                 type="text"
                                 name="qty"
                                 id="sst"
-                                maxlength="9999"
+                                maxlength="99999"
                                 value={cartItem.quantity}
                                 title="Cantidad:"
                                 class="input-text qty"
+                                onChange={(event) => { setCurrentlyEditedCartItemModel(cartItem.item.model); incrementItemQuantityManually(event) }}
                               />
                               <button
                                 onClick={() => incrementItemQuantityInCartByOne(cartItem.item)}
