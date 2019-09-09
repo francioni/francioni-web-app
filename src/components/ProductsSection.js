@@ -23,7 +23,7 @@ export default class ProductsSection extends React.Component {
                     <div className="single-product-slider">
                         <div className="container">
                             {this.renderSectionHeader('Recetados', 'DESCRIPCION PRODUCTOS RECETADOS')}
-                            <ProductSection />
+                            <ProductSection productType='RECETADOS' />
                         </div>
                     </div>
                 }
@@ -31,7 +31,7 @@ export default class ProductsSection extends React.Component {
                     <div className="single-product-slider">
                         <div className="container">
                             {this.renderSectionHeader('SOL', 'DESCRIPCION PRODUCTOS SOL')}
-                            <ProductSection />
+                            <ProductSection productType='SOL' />
                         </div>
                     </div>
                 }
