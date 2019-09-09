@@ -1,9 +1,11 @@
 const PAGES = {
     HOME: '#home',
     CATALOG: '#catalogo',
-    PROMOTIONS: '#promociones',
+    CATALOG_RECIPES: '#catalogo-recetados',
+    CATALOG_SUN: '#catalogo-sol',
+    //PROMOTIONS: '#promociones',
     CONTACT: '#contacto',
-    PRICES: '#precios',
+    //PRICES: '#precios',
     CART: '#carrito'
 }
 
@@ -1161,25 +1163,27 @@ const headerSection = {
             href: '#catalogo',
             options: [
                 {
-                    title: 'recetados'
+                    title: 'recetados',
+                    href: '#catalogo-recetados'
                 },
                 {
-                    title: 'sol'
+                    title: 'sol',
+                    href: '#catalogo-sol'
                 }
             ]
         },
-        {
-            title: 'promociones',
-            href: '#promociones',
-        },
+        // {
+        //     title: 'promociones',
+        //     href: '#promociones',
+        // },
         {
             title: 'contacto',
             href: '#contacto',
         },
-        {
-            title: 'politica de precios',
-            href: '#precios',
-        },
+        // {
+        //     title: 'politica de precios',
+        //     href: '#precios',
+        // },
         {
             title: 'carrito',
             href: '#carrito',

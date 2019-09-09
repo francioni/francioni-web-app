@@ -1,26 +1,30 @@
-import React, { Fragment } from 'react';
-import BannerSection from '../components/BannerSection';
-import FeaturesSection from '../components/FeaturesSection';
-import CategoriesSection from '../components/CategoriesSection';
-import ExclusiveDealsSection from '../components/ExclusiveDealsSection';
-import ProductsSection from '../components/ProductsSection';
-import BrandSection from '../components/BrandSection';
-import RelatedProducts from '../components/RelatedProducts';
+import React from 'react';
+import ProductSection from '../components/ProductSection';
 import HeaderSection from '../components/HeaderSection';
 import FooterSection from '../components/FooterSection';
+import { getCurrentPage } from '../utils';
 
 export default class CatalogPage extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
-        const { data } = this.props;
+        const { data, currentPage } = this.props;
+        console.log('currentPage => ', currentPage);
         return (
-            <Fragment>
+            <div style={{ 'padding-top': '196px', 'padding-left': '40px', 'padding-right': '40px' }}>
                 <HeaderSection data={data.headerSection} />
-                <ProductsSection />
+                {(currentPage === 'RECETADOS' || currentPage === 'catalogo') &&
+                    <>
+                        <div>CATALOGO DE RECETADOS</div>
+                        <ProductSection productType='RECETADOS' />
+                    </>
+                }
+                {(currentPage === 'SOL' || currentPage === 'catalogo') &&
+                    <>
+                        <div>CATALOGO ANTEOJOS DE SOL</div>
+                        <ProductSection productType='SOL' />
+                    </>
+                }
                 <FooterSection data={data.footerSection} />
-            </Fragment>
+            </div>
         );
     }
 }

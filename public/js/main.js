@@ -1,6 +1,5 @@
-
 $(document).ready(function(){
-	"use strict";
+  "use strict";
 
 	var window_width 	 = $(window).width(),
 	window_height 		 = window.innerHeight,
@@ -50,7 +49,7 @@ $(document).ready(function(){
     ==================================*/
     $(".active-banner-slider").owlCarousel({
         items:1,
-        autoplay:false,
+        autoplay:true,
         autoplayTimeout: 5000,
         loop:true,
         nav:true,
@@ -558,8 +557,4 @@ $(document).ready(function(){
           ]
         });
       }
-
-
-  
-
  });

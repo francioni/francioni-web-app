@@ -68,7 +68,7 @@ export const setCurrentlyEditedCartItemModel = (id) => {
 export const getCurrentlyEditedCartItemModel = () => localStorage.getItem('currentlyEditedCartItemModel');
 
 export const incrementItemQuantityManually = (event) => {
-    const updatedItemQuantity = parseInt(event.target.value);
+    const updatedItemQuantity = parseInt(event.target.value) ? parseInt(event.target.value) : 1;
     let cart = getCart();
     cart.forEach((cartItem, index) => {
         if(cartItem.item.model === getCurrentlyEditedCartItemModel()) cart[index].quantity = updatedItemQuantity;
