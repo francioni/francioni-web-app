@@ -25,7 +25,7 @@ export default class ContactPage extends React.Component {
                                         </tr>
                                         <tr>
                                             <th scope="col">Email</th>
-                                            <th scope="col">ADD_EMAIL</th>
+                                            <th scope="col">espaciooptica@gmail.com</th>
                                         </tr>
                                     </thead>
                                 </table>

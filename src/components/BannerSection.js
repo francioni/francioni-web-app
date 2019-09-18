@@ -16,11 +16,13 @@ export default class BannerSection extends React.Component {
                                                 <div className="col-lg-5">
                                                     <div className="banner-content">
                                                         <h1>{item.title}</h1>
-                                                        <p>{item.description}</p>
                                                         <div className="add-bag d-flex align-items-center">
                                                             <a className="add-btn" href=""><span className="lnr lnr-cross"></span></a>
                                                             <span className="add-text text-uppercase">Agregar al carrito</span>
                                                         </div>
+                                                        <br />
+                                                        <p>Marca: {item.brand}</p>
+                                                        <div>{item.description} Lorem ipsum dolor sit amet consectetur adipiscing elit congue dictum mi, lobortis sagittis porttitor enim consequat taciti primis rhoncus nam, suspendisse risus habitasse interdum parturient</div>
                                                     </div>
                                                 </div>
                                                 <div className="col-lg-7">

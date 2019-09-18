@@ -28,7 +28,7 @@ export default class FooterSection extends React.Component {
                                     {
                                         instagramItems.map(item => {
                                             return (
-                                                <li><a href={item.instagramUrl}><img src={item.imageUrl} alt="" /></a></li>
+                                                <li><a href={item.instagramUrl}><img style={{height: '58px', width: '58px'}} src={item.imageUrl} alt="" /></a></li>
                                             )
                                         })
                                     }
@@ -40,10 +40,10 @@ export default class FooterSection extends React.Component {
                                 <h6>{followUsTitle}</h6>
                                 <p>{letUsBeSocialTitle}</p>
                                 <div className="footer-social d-flex align-items-center">
-                                    <a href={facebookUrl}><i className="fa fa-facebook"></i></a>
-                                    <a href={twitterUrl}><i className="fa fa-twitter"></i></a>
-                                    <a href={dribbleUrl}><i className="fa fa-dribbble"></i></a>
-                                    <a href={behanceUrl}><i className="fa fa-behance"></i></a>
+                                    {facebookUrl && <a href={facebookUrl}><i className="fa fa-facebook"></i></a>}
+                                    {twitterUrl && <a href={twitterUrl}><i className="fa fa-twitter"></i></a>}
+                                    {dribbleUrl && <a href={dribbleUrl}><i className="fa fa-dribbble"></i></a>}
+                                    {behanceUrl && <a href={behanceUrl}><i className="fa fa-behance"></i></a>}
                                 </div>
                             </div>
                         </div>

@@ -14,11 +14,11 @@ export default class ShoppingCart extends React.Component {
   render() {
     const cart = getCart();
     return (
-      <section class="cart_area">
-        <div class="container">
-          <div class="cart_inner">
-            <div class="table-responsive">
-              <table class="table">
+      <section className="cart_area">
+        <div className="container">
+          <div className="cart_inner">
+            <div className="table-responsive">
+              <table className="table">
                 <thead>
                   <tr>
                     <th scope="col">Producto</th>
@@ -34,11 +34,11 @@ export default class ShoppingCart extends React.Component {
                       return (
                         <tr key={cartItem.item.model}>
                           <td>
-                            <div class="media">
-                              <div class="d-flex">
-                                <img style={{'max-height': '100px', 'height': '70%', 'width': 'auto'}} src={cartItem.item.image} alt="" />
+                            <div className="media">
+                              <div className="d-flex">
+                                <img style={{ 'max-height': '100px', 'height': '70%', 'width': 'auto' }} src={cartItem.item.image} alt="" />
                               </div>
-                              <div class="media-body">
+                              <div className="media-body">
                                 <p>{cartItem.item.description}</p>
                               </div>
                             </div>
@@ -47,7 +47,7 @@ export default class ShoppingCart extends React.Component {
                             <h5>${cartItem.item.price}</h5>
                           </td>
                           <td>
-                            <div class="product_count">
+                            <div className="product_count">
                               <input
                                 type="text"
                                 name="qty"
@@ -55,22 +55,22 @@ export default class ShoppingCart extends React.Component {
                                 maxlength="99999"
                                 value={cartItem.quantity}
                                 title="Cantidad:"
-                                class="input-text qty"
+                                className="input-text qty"
                                 onChange={(event) => { setCurrentlyEditedCartItemModel(cartItem.item.model); incrementItemQuantityManually(event) }}
                               />
                               <button
                                 onClick={() => incrementItemQuantityInCartByOne(cartItem.item)}
-                                class="increase items-count"
+                                className="increase items-count"
                                 type="button"
                               >
-                                <i class="lnr lnr-chevron-up" />
+                                <i className="lnr lnr-chevron-up" />
                               </button>
                               <button
                                 onClick={() => decrementItemQuantityInCartByOne(cartItem.item)}
-                                class="reduced items-count"
+                                className="reduced items-count"
                                 type="button"
                               >
-                                <i class="lnr lnr-chevron-down" />
+                                <i className="lnr lnr-chevron-down" />
                               </button>
                             </div>
                           </td>
@@ -78,8 +78,8 @@ export default class ShoppingCart extends React.Component {
                             <h5>${getCartItemTotalPrice(cartItem.item, cartItem.quantity)}</h5>
                           </td>
                           <td>
-                            <div class="cupon_text d-flex align-items-center" onClick={() => removeItemFromCart(cartItem.item)}>
-                              <a class="primary-btn" href="#">
+                            <div className="cupon_text d-flex align-items-center" onClick={() => removeItemFromCart(cartItem.item)}>
+                              <a className="primary-btn" href="#">
                                 eliminar
                               </a>
                             </div>
@@ -99,12 +99,79 @@ export default class ShoppingCart extends React.Component {
                     </td>
                   </tr>
                   <tr>
+                    <div>OPCIONES DE PAGO</div>
+                  </tr>
+                  <tr>
                     <td>
-                      <div class="cupon_text d-flex align-items-center">
+                      <div className="cupon_text d-flex align-items-center">
                         <a className="primary-btn" href={generateCartOrder()}>
-                        Generar Pedido</a>
+                          Generar Pedido Por MercadoPago</a>
                       </div>
                     </td>
+                  </tr>
+                  <tr>
+                    <hr />
+                  </tr>
+                  <tr>
+                    <div>Formulario para inicio de pago a través de banco</div>
+                    <br />
+                    <div className="col-lg-9">
+                      <form className="row contact_form"
+                        action="https://formspree.io/cancela.juancarlos@gmail.com"
+                        method="POST"
+                        id="contactForm"
+                        novalidate="novalidate">
+                        <div className="col-md-6">
+                          <div className="form-group">
+                            <input type="email"
+                              className="form-control"
+                              id="name"
+                              name="name"
+                              placeholder="Ingresar Correo Electronico" />
+                          </div>
+                          <div className="form-group">
+                            <input type="text"
+                              className="form-control"
+                              id="name"
+                              name="name"
+                              placeholder="Ingresar Nombre y Apellido" />
+                          </div>
+                          <div className="form-group">
+                            <input type="text"
+                              className="form-control"
+                              id="tel"
+                              name="tel"
+                              placeholder="Ingresar Telefono" />
+                          </div>
+                          <div className="form-group">
+                            <input type="text"
+                              className="form-control"
+                              id="cuit"
+                              name="cuit"
+                              placeholder="Ingresar CUIT" />
+                          </div>
+                          <div className="form-group">
+                            <input type="hidden"
+                              className="form-control"
+                              id="userdata"
+                              name="userdata"
+                              value={JSON.stringify(getCart())} />
+                          </div>
+                        </div>
+                        <div className="col-md-6">
+                          <div className="form-group">
+                            <textarea className="form-control"
+                              name="message"
+                              id="message"
+                              rows="1"
+                              placeholder="Ingresar comentarios adicionales"></textarea>
+                          </div>
+                        </div>
+                        <div className="col-md-12">
+                          <button type="submit" value="submit" className="primary-btn">Enviar Pedido</button>
+                        </div>
+                      </form>
+                    </div>
                   </tr>
                 </tbody>
               </table>
