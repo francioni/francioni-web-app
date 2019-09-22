@@ -39,7 +39,7 @@ export default class ShoppingCart extends React.Component {
                                 <img style={{ 'max-height': '100px', 'height': '70%', 'width': 'auto' }} src={cartItem.item.image} alt="" />
                               </div>
                               <div className="media-body">
-                                <p>{cartItem.item.description}</p>
+                                <p>{cartItem.item.name} - {cartItem.item.description}</p>
                               </div>
                             </div>
                           </td>
@@ -117,16 +117,16 @@ export default class ShoppingCart extends React.Component {
                     <br />
                     <div className="col-lg-9">
                       <form className="row contact_form"
-                        action="https://formspree.io/cancela.juancarlos@gmail.com"
+                        action="https://formcarry.com/s/GuJmRSlc6xm"
                         method="POST"
                         id="contactForm"
-                        novalidate="novalidate">
+                        accept-charset="UTF-8">
                         <div className="col-md-6">
                           <div className="form-group">
                             <input type="email"
                               className="form-control"
-                              id="name"
-                              name="name"
+                              id="email"
+                              name="email"
                               placeholder="Ingresar Correo Electronico" />
                           </div>
                           <div className="form-group">

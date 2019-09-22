@@ -128,6 +128,12 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
   <script src="%PUBLIC_URL%/js/gmaps.min.js"></script>
   <script src="%PUBLIC_URL%/js/main.js"></script>
+  <script>
+    window.onhashchange = event => {
+      location.reload();
+      window.scrollTo(0, 0);
+    };
+  </script>
 </body>
 
 </html>

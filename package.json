@@ -6,6 +6,9 @@
     "jquery": "^3.4.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-image-magnify": "^2.7.4",
+    "react-image-zoom": "^0.7.0",
+    "react-magnifier": "^3.0.3",
     "react-scripts": "3.0.0"
   },
   "scripts": {

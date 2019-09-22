@@ -6,7 +6,8 @@ const PAGES = {
     //PROMOTIONS: '#promociones',
     CONTACT: '#contacto',
     //PRICES: '#precios',
-    CART: '#carrito'
+    CART: '#carrito',
+    PRODUCT_DETAILS: '#detalles-producto'
 }
 
 const products = [

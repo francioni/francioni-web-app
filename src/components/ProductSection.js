@@ -4,17 +4,21 @@ const addItemToCart = require('../utils').addItemToCart;
 const removeItemFromCart = require('../utils').removeItemFromCart;
 const isItemAlreadyOnCart = require('../utils').isItemAlreadyOnCart;
 const getCart = require('../utils').getCart;
+const redirect = require('../utils').redirect;
 
 export default class ProductSection extends React.Component {
     render() {
-        const { products } = data;
+        const { products, PAGES } = data;
         const { productType } = this.props;
         return (
             <div className="row">
                 {
                     products.filter(product => product.category === productType).map((product, index) => {
                         return (
-                            <div key={index} className="col-lg-3 col-md-6">
+                            <div key={index}
+                                className="col-lg-3 col-md-6"
+                                style={{ cursor: 'pointer' }}
+                                onClick={() => redirect(`${PAGES.PRODUCT_DETAILS}___${product.name}`)}>
                                 <div className="single-product">
                                     <img className="img-fluid" src={product.image} alt="" />
                                     <div className="product-details">
