@@ -3,6 +3,8 @@ import React, { Fragment } from 'react';
 import Magnifier from "react-magnifier";
 import HeaderSection from '../components/HeaderSection';
 import FooterSection from '../components/FooterSection';
+import Viewer from 'react-viewer';
+import 'react-viewer/dist/index.css';
 const addItemToCart = require('../utils').addItemToCart;
 const getCart = require('../utils').getCart;
 const isItemAlreadyOnCart = require('../utils').isItemAlreadyOnCart;
@@ -13,7 +15,8 @@ export default class ProductDetailsPage extends React.Component {
         super(props);
         this.state = {
             showZoomedImage: false,
-            currentZoomedImage: null
+            currentZoomedImage: null,
+            visible: false
         };
     }
     render() {
@@ -34,10 +37,24 @@ export default class ProductDetailsPage extends React.Component {
                                 <div className="col-lg-6">
                                     <div className="s_Product_carousel">
                                         <div className="single-prd-item">
-                                            <Magnifier src={product.image} width={500} zoomFactor={1.50} mgWidth={250} mgHeight={250}/>
+                                            <div>
+                                                <img src={product.image} onClick={() => { this.setState({ visible: !this.state.visible }); }} />
+                                                <Viewer
+                                                    visible={this.state.visible}
+                                                    drag={false}
+                                                    onClose={() => { this.setState({ visible: false }); }}
+                                                    images={[{ src: product.image, alt: '' }, { src: product.imageLateral, alt: '' }]}
+                                                />
+                                            </div>
                                         </div>
                                         <div className="single-prd-item">
-                                            <Magnifier src={product.imageLateral} width={500} zoomFactor={1.50} mgWidth={250} mgHeight={250}/>
+                                            <img src={product.imageLateral} onClick={() => { this.setState({ visible: !this.state.visible }); }} />
+                                            <Viewer
+                                                visible={this.state.visible}
+                                                drag={false}
+                                                onClose={() => { this.setState({ visible: false }); }}
+                                                images={[{ src: product.image, alt: '' }, { src: product.imageLateral, alt: '' }]}
+                                            />
                                         </div>
                                     </div>
                                 </div>

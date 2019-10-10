@@ -10,7 +10,7 @@ export default class FooterSection extends React.Component {
                         <div className="col-lg-3  col-md-6 col-sm-6">
                             <div className="single-footer-widget">
                                 <h6>{aboutUsTitle}</h6>
-                                <p>
+                                <p style={{'textAlign': 'justify'}}>
                                     {aboutUsDescription}
                                 </p>
                             </div>

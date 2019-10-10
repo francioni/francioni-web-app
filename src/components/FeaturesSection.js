@@ -6,17 +6,15 @@ export default class FeaturesSection extends React.Component {
         return (
             <section className="features-area section_gap">
                 <div className="container">
-                    <div className="row features-inner">
+                    <div className="row features-inner" style={{'paddingTop': '60px'}}>
                         {
                             data.items.map((item, index) => {
                                 return (
                                     <div key={index} className="col-lg-3 col-md-6 col-sm-6">
                                         <div className="single-features">
                                             <div className="f-icon">
-                                                <img src="img/features/f-icon1.png" alt="" />
+                                                <img src={item.image} alt="" style={{'max-height': '80px'}}/>
                                             </div>
-                                            <h6>{item.title}</h6>
-                                            <p>{item.description}</p>
                                         </div>
                                     </div>
                                 )

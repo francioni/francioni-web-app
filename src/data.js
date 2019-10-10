@@ -1200,33 +1200,25 @@ const bannerSection = {
 const featuresSection = {
     items: [
         {
-            title: 'Delivery gratuito',
-            description: 'Free Shipping on all order',
-            image: 'img/items/img/features/f-icon1.png'
+            image: 'img/features/f-icon2.png'
         },
         {
-            title: 'Return Policy',
-            description: 'Free Shipping on all order',
-            image: 'img/items/img/features/f-icon2.png'
+            image: 'img/features/f-icon3.png'
         },
         {
-            title: '24/7 Support',
-            description: 'Free Shipping on all order',
-            image: 'img/items/img/features/f-icon3.png'
+            image: 'img/features/f-icon4.jpg'
         },
         {
-            title: 'Secure Payment',
-            description: 'Free Shipping on all order',
-            image: 'img/items/img/features/f-icon4.png'
+            image: 'img/features/f-icon1.png'
         }
     ]
 }
 
 const footerSection = {
-    aboutUsTitle: 'ABOUT_US_ADD',
-    aboutUsDescription: 'DESCRIPTION_ADD',
-    corporateTitle: 'CORPORATE_TITLE_ADD',
-    corporateDescription: 'CORPORATE_DESCRIPTION_ADD',
+    aboutUsTitle: 'SOBRE NOSOTROS',
+    aboutUsDescription: 'Somos distribuidores para ópticas de todo el páis de las marcas más vendidas de armazones de sol y recetados. Todos nuestros productos son originales y tienen garantía. No exigimos volumen mínimo de compra, realizamos entregas a todo el país y además sabemos que tenemos los precios más convenientes del mercado!!',
+    corporateTitle: 'CONTACTO',
+    corporateDescription: 'espaciooptica@gmail.com',
     instagramTitle: 'INSTAGRAM',
     instagramItems: [
         {
