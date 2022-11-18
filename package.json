@@ -9,7 +9,7 @@
     "react-image-magnify": "^2.7.4",
     "react-image-zoom": "^0.7.0",
     "react-magnifier": "^3.0.3",
-    "react-scripts": "3.0.0",
+    "react-scripts": "5.0.1",
     "react-viewer": "^2.10.2"
   },
   "scripts": {
